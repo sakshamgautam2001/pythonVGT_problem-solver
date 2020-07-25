@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+{% if data %}
+    <h1>Questions Asked</h1>
+    {% for a in data %}
+        <p><img src="../static/photos/{{a[6]}}" width="100px" height="100px"> </p>
+        <h3> {{a[2]}}</h3>
+        <p>Subject: {{a[1]}}</p>
+        <p>Date: {{a[3]}}</p>
+        <p>Posted By: {{a[4]}}</p><hr/>
+
+
+
+    {% endfor %}
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

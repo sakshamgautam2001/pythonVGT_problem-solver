@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Base temp</title>
+<link type="text/css" rel="stylesheet" href="../static/css/base.css">
+</head>
+
+<body marginheight="0" marginwidth="0">
+
+<div id="main">
+	<div id="wrap">
+    	<div id="header">
+        	<div id="mono"></div>
+            <div id="topic"><h1 align="center" style="color:#FF0; font-size:60; "><i>Problem Solver</i></h1></div>
+            <div id="logo"></div>
+        </div>
+        <div id="menu">
+        	<ul>
+            	<li><a href="login">login</a></li>
+                <li><a href="my_questions">My Questions</a></li>
+                <li><a href="answer_questions">Answer</a></li>
+                <li><a href="home">My Profile</a></li>
+                <li><a href="logout">Logout</a></li>
+                <li><a href="sign_up">Sign Up</a></li>
+
+            </ul>
+        </div>
+        <div id="content">
+        	<div id="mc">
+            	{% block c1 %}
+                {% endblock %}
+            </div>
+            <div id="sc">
+            	<h2>Subjects</h2>
+                <form action="show_free_questions" method="post">
+                	<select name="OP">
+                    	<option hidden>Select</option>
+                        <option>Motivational</option>
+                        <option>Cooking</option>
+                        <option>Academics</option>
+                    </select>
+                    <input type="submit" value="open">
+                	
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
+

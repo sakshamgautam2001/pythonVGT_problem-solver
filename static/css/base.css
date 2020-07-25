@@ -1,0 +1,102 @@
+
+
+#main{
+	
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	}
+#wrap{
+	
+	float:left;
+	width:100%;
+	height:auto;}
+#header{
+	float:left;
+	
+	width:100%;
+	height:200px;}
+	
+#mono{
+	background:url(../images/madam.jpg);
+	float:left;
+	width:20%;
+	height:200px;
+	background-size:100% 100%;
+	}
+#topic{
+	background-image:url(../images/socialmedia.network.jpg);
+	float:left;
+	height:200px;
+	width:60%;
+	background-size:100% 100%;
+	line-height:100px;}
+#logo{
+	background-image:url(../images/problem%20chart.jpg);
+	background-size:100% 100%;	
+	float:left;
+	height:200px;
+	width:20%;
+	}
+	
+#menu{
+	float:left;
+	height:50px;
+	width:100%;
+	
+	position:relative;
+	z-index:4px;
+	}
+ul{
+	background-color:#F06;
+	height:50px;
+	margin-top:0;	
+	}
+ul li{
+	float:left;
+	text-align:center;
+	margin-left:60px;
+	width:140px;
+	line-height:50px;
+	
+	list-style:none;
+	}
+li a{
+	color:#FFF;
+	text-decoration:none;
+	font-size:24px;
+	}
+a:hover{
+	display:block;
+	background-color:#C03;
+	}
+
+#content{
+	float:left;
+	width:100%;
+	height:600px;
+	z-index:10px;
+	}
+#mc{
+	float:left;
+	height:600px;
+	width:60%;
+	border:2px solid #F00;
+	border-radius:10px;
+	margin:3px;
+	background-color:#FC6;
+	overflow:scroll;
+	}
+#sc{
+	float:left;
+	height:600px;
+	width:38.4%;
+	border:2px solid #F00;
+	border-radius:10px;
+	margin:3px;
+	background-color:#FC6;
+	}
+
+
+
+

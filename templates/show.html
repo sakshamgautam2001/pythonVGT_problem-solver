@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Data available</h1>
+
+{% if dt %}
+    {% for a in dt %}
+        <h2>{{a[0]}}</h2>
+        <p><img src="../static/photos/{{a[6]}}" height="100px" width="100px"></p>
+        <p>roll no. - {{a[1]}}</p>
+        <p>branch - {{a[2]}}</p>
+        <p>address - {{a[3]}}</p>
+        <p>contact - {{a[4]}}</p>
+        <p>email - {{a[5]}}</p>
+        <form method="post" action="edit_user">
+            <input type="hidden" name="AA" value="{{a[5]}}"/>
+            <input type="submit" name="AB" value="Edit"/><hr/>
+        </form>
+    {% endfor %}
+
+{% elif mg %}
+    <h2>{{mg}}</h2>
+{% endif %}
+
+{% endblock %}

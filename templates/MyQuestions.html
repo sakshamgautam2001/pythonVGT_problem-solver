@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>My Questions</h1>
+
+{% if dt %}
+    {% for a in dt %}
+        <h3>{{a[0]}}.  {{a[2]}}</h3>
+        <p>Subject: {{a[1]}}</p>
+        <p>Date: {{a[3]}}</p>
+
+        <form method="post" action="find_solution">
+            <p><input type="hidden" name="H1" value="{{a[0]}}"></p>
+            <p><input type="submit" name="H2" value="Solutions"></p>
+        </form>
+
+
+
+
+    {% endfor %}
+
+
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
+
+
+

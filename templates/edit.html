@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Edit data</h1>
+
+{% if dt %}
+    <form action="update_user" method="post">
+        <p>Name<input type="text" name="T1" value="{{dt[0]}}"></p>
+        <p>Roll no.<input type="text" name="T2" value="{{dt[1]}}"></p>
+        <p>Branch <input type="text" name="T3" value="{{dt[2]}}"></p>
+        <p>Address<input type="text" name="T4" value="{{dt[3]}}"></p>
+        <p>Contact <input type="text" name="T5" value="{{dt[4]}}"></p>
+        <p>Email <input type="email" name="T6" value="{{dt[5]}}" readonly></p>
+
+        <p><input type="submit" value="Edit"></p>
+    </form>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{%endblock %}

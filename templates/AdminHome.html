@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Admin Home</h1>
+
+
+{% if photo=='no' %}
+    <h3>No profile picture</h3>
+    <a href="upload_photo">Upload</a>
+{% else %}
+
+
+
+    <img src="../static/photos/{{photo[0]}}" width="100px" height="100px" />
+    <a href="change_photo">Change profile picture</a><br/>
+    <a href="delete_photo">Delete Profile Picture</a><br/>
+{% endif %}
+
+
+<a href="admin_reg">Create new</a>
+
+<p><a href="change_password">Change password</a></p>
+<p><a href="show_user">Show Data Available</a></p>
+<a href="logout">Logout</a>
+
+{% endblock %}
+
+

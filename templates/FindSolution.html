@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Find Solutions</h1>
+
+{% if dt %}
+    {% for a in dt %}
+
+        <p><img src="../static/photos/{{a[7]}}" height="100px" width="100px"> </p>
+        <p>Solved By : {{a[4]}}</p>
+        <p>sid : {{a[0]}}</p>
+        <p>Solution : {{a[2]}}</p>
+        <p>Solved Date : {{a[3]}}</p>
+        <p>Comments : {{a[5]}}</p><hr/>
+
+    {% endfor %}
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

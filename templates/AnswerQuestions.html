@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+{% if dt %}
+    <h1>Questions to answer</h1>
+    {% for a in dt %}
+        <p><img src="../static/photos/{{a[6]}}" width="100px" height="100px"> </p>
+        <h3> {{a[2]}}</h3>
+        <p>Subject: {{a[1]}}</p>
+        <p>Date: {{a[3]}}</p>
+        <p>Posted By: {{a[4]}}</p>
+        <form method="post" action="answer_questions">
+            <input type="hidden" name="H1" value="{{a[0]}}" />
+
+            <p><input type="submit" value="Answer"></p>
+        </form>
+
+    {% endfor %}
+
+{% elif a %}
+    <h1>Upload answer</h1>
+    <p><img src="../static/photos/{{a[6]}}" height="100px" width="100px"> </p>
+    <p>Question Id : {{a[0]}}</p>
+    <p>Subject : {{a[1]}}</p>
+    <p>Question : {{a[2]}}</p>
+    <p>Posted by : {{a[4]}}</p>
+
+    <form action="upload_solution" method="post">
+        <p>Answer : <textarea name="B1" cols="60" rows="5"></textarea></p>
+        <p>Comments : <textarea name="B2" cols="60" rows="5"></textarea> </p>
+        <p><input type="submit" value="Upload"></p>
+        <p><input type="hidden" name="B3" value="{{a[0]}}" ></p>
+        <p><input type="hidden" name="B4" value="{{a[4]}}"></p>
+    </form>
+
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+
+{% if b=='no' %}
+    <h3>No answers found</h3>
+{% else %}
+    {% for a in b %}
+        <p><img src="../static/photos/{{a[7]}}" height="50px" width="50px"> </p>
+        <p>sid - {{a[0]}}</p>
+        <p>solution - {{a[2]}}</p>
+        <p>date - {{a[3]}}</p>
+        <p>solved by - {{a[4]}}</p>
+        <p>comments - {{a[5]}}</p>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
+
+

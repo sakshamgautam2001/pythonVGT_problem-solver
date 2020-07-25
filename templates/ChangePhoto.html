@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Chnage profile Picture</h1>
+
+<form method="post" action="change_photo" enctype="multipart/form-data">
+    <p>New File <input type="file" name="N1"></p>
+    <p><input type="submit" value="Change"></p>
+
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block c1 %}
+
+<h1>Ask your question here</h1>
+
+<form method="post" action="ask_question">
+    <p>Subject <input type="text" name="T1"></p>
+    <p>Question Type :
+        <select name="T3">
+            <option hidden>select</option>
+            <option>Motivational</option>
+
+            <option>Cooking</option>
+            <option>Academics</option>
+
+
+
+
+
+        </select>
+
+    </p>
+    <p>Question <textarea name="T2"></textarea></p>
+    <p><input type="submit" value="Ask"></p>
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+    <p><a href="ask_question">Ask another question</a></p>
+    <p><a href="user_home">Go to user home</a></p>
+{% endif %}
+
+{% endblock %}
